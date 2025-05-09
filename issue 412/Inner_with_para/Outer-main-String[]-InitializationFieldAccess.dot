@@ -1,0 +1,19 @@
+digraph {
+    13 -> 15 [label="EACH_TO_EACH"];
+    15 -> 17 [label="EACH_TO_EACH"];
+    15 -> 12 [label="ClassCircularityError"];
+    15 -> 12 [label="ClassFormatError"];
+    15 -> 12 [label="NoClassDefFoundError"];
+    15 -> 12 [label="OutOfMemoryError"];
+    17 -> 18 [label="EACH_TO_EACH"];
+    17 -> 12 [label="RuntimeException"];
+    17 -> 12 [label="Error"];
+    18 -> 11 [label="EACH_TO_EACH"];
+
+    13 [shape=oval label="Process order: 1\lTransferInput#192\lBefore: InitializationStore#199(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l~~~~~~~~~\l<entry>"];
+    15 [shape=rectangle label="Process order: 2\lTransferInput#193\lBefore: InitializationStore#199(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l~~~~~~~~~\lOuter   [ ClassName ]    > CFAV{@Initialized, Outer}\l~~~~~~~~~\lAnalysisResult#6\lAfter: resultValue=CFAV{@Initialized, Outer}\lInitializationStore#216(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l"];
+    17 [shape=rectangle label="Process order: 3\lTransferInput#196\lBefore: InitializationStore#200(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l~~~~~~~~~\lnew Outer()   [ ObjectCreation ]\l~~~~~~~~~\lAnalysisResult#6\lAfter: resultValue=CFAV{@Initialized, Outer}\lInitializationStore#218(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l"];
+    12 [shape=oval label="Process order: 6\lTransferInput#198\lBefore: InitializationStore#201(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l~~~~~~~~~\l<exceptional-exit>"];
+    18 [shape=rectangle label="Process order: 4\lTransferInput#204\lBefore: InitializationStore#208(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l~~~~~~~~~\lexpression statement new Outer()   [ ExpressionStatement ]\l~~~~~~~~~\lAnalysisResult#6\lAfter: InitializationStore#221(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l"];
+    11 [shape=oval label="Process order: 5\lTransferInput#209\lBefore: InitializationStore#213(\l  args > CFAV{@Initialized, String[]}\l  initialized fields = [])\l~~~~~~~~~\l<exit>"];
+}

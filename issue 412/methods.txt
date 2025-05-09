@@ -1,0 +1,9 @@
+<Inner::<init>()::99>	./Inner-_init-KeyFor.dot
+<Outer::main(String[])::318>	./Outer-main-String[]-KeyFor.dot
+<Outer::<init>()::167>	./Outer-_init-KeyFor.dot
+<Inner::<init>()::99>	./Inner-_init-InitializationFieldAccess.dot
+<Outer::main(String[])::318>	./Outer-main-String[]-InitializationFieldAccess.dot
+<Outer::<init>()::167>	./Outer-_init-InitializationFieldAccess.dot
+<Inner::<init>()::99>	./Inner-_init-NullnessNoInit.dot
+<Outer::main(String[])::318>	./Outer-main-String[]-NullnessNoInit.dot
+<Outer::<init>()::167>	./Outer-_init-NullnessNoInit.dot

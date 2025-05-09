@@ -1,0 +1,27 @@
+digraph {
+    2 -> 3 [label="EACH_TO_EACH"];
+    3 -> 4 [label="EACH_TO_EACH"];
+    4 -> 5 [label="EACH_TO_EACH"];
+    4 -> 1 [label="RuntimeException"];
+    4 -> 1 [label="Error"];
+    5 -> 6 [label="EACH_TO_EACH"];
+    6 -> 8 [label="EACH_TO_EACH"];
+    6 -> 1 [label="ClassCircularityError"];
+    6 -> 1 [label="ClassFormatError"];
+    6 -> 1 [label="NoClassDefFoundError"];
+    6 -> 1 [label="OutOfMemoryError"];
+    8 -> 9 [label="EACH_TO_EACH"];
+    8 -> 1 [label="RuntimeException"];
+    8 -> 1 [label="Error"];
+    9 -> 0 [label="EACH_TO_EACH"];
+
+    2 [shape=oval label="Process order: 1\lTransferInput#133\lBefore: InitializationStore#147(\l  this > CFAV{@UnderInitialization, Outer}\l  initialized fields = [])\l~~~~~~~~~\l<entry>"];
+    3 [shape=rectangle label="Process order: 2\lTransferInput#134\lBefore: InitializationStore#147(\l  this > CFAV{@UnderInitialization, Outer}\l  initialized fields = [])\l~~~~~~~~~\l(this)   [ ImplicitThis ]    > CFAV{@UnderInitialization, Outer}\l(this).<init>   [ MethodAccess ]    > CFAV{@UnderInitialization, Outer}\l~~~~~~~~~\lAnalysisResult#5\lAfter: resultValue=CFAV{@UnderInitialization, Outer}\lInitializationStore#175(\l  this > CFAV{@UnderInitialization, Outer}\l  initialized fields = [])\l"];
+    4 [shape=rectangle label="Process order: 3\lTransferInput#138\lBefore: InitializationStore#148(\l  this > CFAV{@UnderInitialization, Outer}\l  initialized fields = [])\l~~~~~~~~~\l(this).<init>()   [ MethodInvocation ]\l~~~~~~~~~\lAnalysisResult#5\lAfter: resultValue=CFAV{@UnderInitialization, Object}\lInitializationStore#179(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l"];
+    5 [shape=rectangle label="Process order: 4\lTransferInput#141\lBefore: then=InitializationStore#149(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = []),\lelse=InitializationStore#150(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l~~~~~~~~~\lexpression statement super()   [ ExpressionStatement ]\li   [ VariableDeclaration ]\l(this)   [ ImplicitThis ]\l~~~~~~~~~\lAnalysisResult#5\lAfter: resultValue=CFAV{@UnderInitialization, Outer}\lInitializationStore#185(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l"];
+    1 [shape=oval label="Process order: 9\lTransferInput#143\lBefore: InitializationStore#151(\l  this > CFAV{@UnderInitialization, Outer}\l  initialized fields = [])\l~~~~~~~~~\l<exceptional-exit>"];
+    6 [shape=rectangle label="Process order: 5\lTransferInput#149\lBefore: InitializationStore#156(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l~~~~~~~~~\lInner   [ ClassName ]\l~~~~~~~~~\lAnalysisResult#5\lAfter: resultValue=CFAV{@Initialized, Inner}\lInitializationStore#188(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l"];
+    8 [shape=rectangle label="Process order: 6\lTransferInput#152\lBefore: InitializationStore#157(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l~~~~~~~~~\l(this).new Inner()   [ ObjectCreation ]\l~~~~~~~~~\lAnalysisResult#5\lAfter: resultValue=CFAV{@Initialized, Inner}\lInitializationStore#190(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l"];
+    9 [shape=rectangle label="Process order: 7\lTransferInput#159\lBefore: InitializationStore#166(\l  this > CFAV{@UnderInitialization, Outer}\l  this.<init>() > CFAV{@UnderInitialization, Object}\l  initialized fields = [])\l~~~~~~~~~\li = (this).new Inner()   [ Assignment ]\l(this)   [ ImplicitThis ]\l\"\"   [ StringLiteral ]\l(this).f   [ FieldAccess ]\l(this).f = \"\"   [ Assignment ]\lexpression statement f = \"\"   [ ExpressionStatement ]\l~~~~~~~~~\lAnalysisResult#5\lAfter: InitializationStore#197(\l  this > CFAV{@UnderInitialization, Outer}\l  initialized fields = [f])\l"];
+    0 [shape=oval label="Process order: 8\lTransferInput#169\lBefore: InitializationStore#171(\l  i > CFAV{@Initialized, Inner}\l  this > CFAV{@UnderInitialization, Outer}\l  this.f > CFAV{@Initialized, String}\l  initialized fields = [f])\l~~~~~~~~~\l<exit>"];
+}
